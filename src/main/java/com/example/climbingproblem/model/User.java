@@ -8,31 +8,31 @@ import javax.persistence.*;
 import java.util.Collection;
 import java.util.Collections;
 
-@Entity(name = "Users")
+@Entity(name = "users")
 public class User{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column
-    private String Name;
+    private String name;
     @Column
-    private String PhoneNumber;
+    private String phonenumber;
     @Column
-    private String Email;
+    private String email;
     @Column
     private String password;
 
     public User(){}
 
-    public User(String name, String phoneNumber, String email, String password) {
-        this.Name = name;
-        this.PhoneNumber = phoneNumber;
-        this.Email = email;
+    public User(String name, String phonenumber, String email, String password) {
+        this.name = name;
+        this.phonenumber = phonenumber;
+        this.email = email;
         this.password = password;
     }
 
     public Long getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(Long id) {
@@ -40,31 +40,31 @@ public class User{
     }
 
     public String getName() {
-        return Name;
+        return this.name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getPhoneNumber() {
-        return PhoneNumber;
+        return this.phonenumber;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        PhoneNumber = phoneNumber;
+    public void setPhoneNumber(String phonenumber) {
+        this.phonenumber = phonenumber;
     }
 
     public String getEmail() {
-        return Email;
+        return this.email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
     }
 
     public String getPassword() {
-        return password;
+        return this.password;
     }
 
     public void setPassword(String password) {
