@@ -1,0 +1,14 @@
+[
+  {
+  "name":"Kwun Tong Line",
+  "stations": [
+    "Lam Tin", "Kwun Tong", "Ngau Tau Kok", "Kowloon Bay", "Choi Hung", "Diamond Hill", "Wong Tai Sin", "Lok Fu", "Kowloon Tong", "Shek Kip Mei", "Prince Edward", "Mong Kok", "Yau Ma Tei", "Ho Man Tin", "Whampoa"
+  ]
+  },
+  {
+    "name": "Tsuen Wan Line",
+    "stations": ["Tsuen Wan", "Tai Wo Hau", "Kwai Hing", "Kwai Fong", "Lai King", "Mei Foo", "Lai Chi Kok", "Cheung Sha Wan", "Sham Shui Po", "Prince Edward", "Mong Kok", "Yau Ma Tei", "Jordan", "Tsim Sha Tsui"
+      ]
+  }
+
+]
