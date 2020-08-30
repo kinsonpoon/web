@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { Text, View, StyleSheet, Alert, Picker } from 'react-native';
+import {Text, View, StyleSheet, Alert, Picker, TouchableOpacity} from 'react-native';
 import stationList from '../source/mtrStation.json';
 class SelectLine extends Component {
     state = {
@@ -8,6 +8,9 @@ class SelectLine extends Component {
         selectedValue2: "Kwun Tong Line",
         selectedStation1:'',
         selectedStation2:'',
+    }
+    result = (startPoint, endPoint) => {
+        alert('Start: ' + startPoint + ' End: ' + endPoint)
     }
     componentDidMount() {
         let PickerValueHolder = stationList;
@@ -54,6 +57,13 @@ class SelectLine extends Component {
                     </View>
 
 
+                <TouchableOpacity
+                    style = {styles.submitButton}
+                    onPress = {
+                        () => this.result(this.state.selectedStation1, this.state.selectedStation2)
+                    }>
+                    <Text style = {styles.submitButtonText}> Submit </Text>
+                </TouchableOpacity>
 
             </View>
         );
@@ -74,6 +84,15 @@ const styles = StyleSheet.create({
         width:300,
         borderColor: '#7a42f4',
         borderWidth: 1
+    },
+    submitButton: {
+        backgroundColor: '#7a42f4',
+        padding: 10,
+        margin: 15,
+        height: 40,
+    },
+    submitButtonText:{
+        color: 'white'
     }
 
 });

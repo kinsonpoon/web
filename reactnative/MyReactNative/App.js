@@ -1,16 +1,28 @@
 import React, {Component} from 'react';
 import {Text, View, TextInput, StyleSheet} from 'react-native';
-import MtrInput from './components/mtrInput.js'
-import SelectLine from './components/selectLine.js'
-import MtrStation from './components/mtrStation.js';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import HomeScreen from './Home';
+import MtrScreen from './Mtr';
+
+
+const Stack = createStackNavigator();
 
 export default class App extends Component {
     render() {
         return (
-            <view>
-                <SelectLine/>
-                <MtrInput/>
-            </view>
+            <NavigationContainer>
+                <Stack.Navigator>
+                    <Stack.Screen
+                        name="Home"
+                        component={HomeScreen}
+                    />
+                    <Stack.Screen
+                        name="Mtr"
+                        component={MtrScreen}
+                    />
+                </Stack.Navigator>
+            </NavigationContainer>
         );
     }
 }
